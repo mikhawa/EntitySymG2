@@ -41,7 +41,8 @@ php bin/console make:entity
  > Article
 Article
 
- Add the ability to broadcast entity updates using Symfony UX Turbo? (yes/no) [no]:
+ Add the ability to broadcast entity updates using Symfony UX 
+ Turbo? (yes/no) [no]:
  >
 
  created: src/Entity/Article.php
@@ -57,19 +58,22 @@ Article
  Field length [255]:
  > 160
 
- Can this field be null in the database (nullable) (yes/no) [no]:
+ Can this field be null in the database (nullable) 
+ (yes/no) [no]:
  >
 
  updated: src/Entity/Article.php
 
- Add another property? Enter the property name (or press <return> to stop adding fields):
+ Add another property? Enter the property name 
+ (or press <return> to stop adding fields):
  > text
  
  Field type (enter ? to see all types) [string]:
  > text
 text
 
- Can this field be null in the database (nullable) (yes/no) [no]:
+ Can this field be null in the database (nullable) 
+ (yes/no) [no]:
  >
 
  updated: src/Entity/Article.php
@@ -82,12 +86,14 @@ text
  > datetime
 datetime
 
- Can this field be null in the database (nullable) (yes/no) [no]:
+ Can this field be null in the database (nullable) 
+ (yes/no) [no]:
  > yes
 
  updated: src/Entity/Article.php
 
- Add another property? Enter the property name (or press <return> to stop adding fields):
+ Add another property? Enter the property name 
+ (or press <return> to stop adding fields):
  > datePublish
 
  
@@ -95,23 +101,27 @@ datetime
  > datetime
 datetime
 
- Can this field be null in the database (nullable) (yes/no) [no]:
+ Can this field be null in the database (nullable) 
+ (yes/no) [no]:
  > yes
 
  updated: src/Entity/Article.php
 
- Add another property? Enter the property name (or press <return> to stop adding fields):
+ Add another property? Enter the property name 
+ (or press <return> to stop adding fields):
  > isPublished
 
  Field type (enter ? to see all types) [boolean]:
  >
 
- Can this field be null in the database (nullable) (yes/no) [no]:
+ Can this field be null in the database (nullable) 
+ (yes/no) [no]:
  >
 
  updated: src/Entity/Article.php
 
- Add another property? Enter the property name (or press <return> to stop adding fields):
+ Add another property? Enter the property name 
+ (or press <return> to stop adding fields):
  >
 
   Success!
