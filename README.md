@@ -133,3 +133,40 @@ php bin/console make:migration
 
 
 ```
+
+## Création de `.env.local`
+
+    cp .env .env.local
+
+Il ne sera pas mis sur github car il est dans le `.gitignore`
+
+puis modifier la ligne `DATABASE_URL` pour la connexion à la base de données pour activer mysql  :
+    
+```env
+DATABASE_URL="mysql://root:@127.0.0.1:3306/entitysymg2?serverVersion=8.3.0&charset=utf8mb4"
+# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=10.11.2-MariaDB&charset=utf8mb4"
+# DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+
+```
+
+## Création de la base de données
+
+    php bin/console doctrine:database:create
+
+## Création de la migration
+
+    php bin/console make:migration
+
+## Exécution de la migration
+
+    php bin/console doctrine:migrations:migrate
+
+ou
+
+    php bin/console d:m:m
+
+
+## Création d'un CRUD
+
+    php bin/console make:crud Article
+
