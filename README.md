@@ -215,3 +215,11 @@ class ArticleType extends AbstractType
     }
 }
 ```
+
+## Pour les templates
+
+```yaml
+# config/packages/twig.yaml
+twig:
+    form_themes: ['bootstrap_5_layout.html.twig']
+```
