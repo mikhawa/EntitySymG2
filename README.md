@@ -269,3 +269,15 @@ import './vendor/bootstrap/dist/css/bootstrap.min.css'
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
 ```
+
+Pour mettre les fichiers CSS et JS de Bootstrap 5 dans le dossier `public` :
+
+```bash
+php bin/console asset-map:compile
+```
+
+Voir la documentation :
+
+https://symfony.com/doc/current/frontend/asset_mapper.html
+
+    php bin/console debug:asset-map --full
