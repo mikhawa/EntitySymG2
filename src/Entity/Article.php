@@ -11,7 +11,10 @@ class Article
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(
+        type: Types::INTEGER,
+        options: ['unsigned' => true]
+    )]
     private ?int $id = null;
 
     #[ORM\Column(length: 160)]
@@ -20,13 +23,20 @@ class Article
     #[ORM\Column(type: Types::TEXT)]
     private ?string $text = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    #[ORM\Column(
+        type: Types::DATETIME_MUTABLE,
+        nullable: true,
+        options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeInterface $dateCreate = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
+    #[ORM\Column(
+        type: Types::DATETIME_MUTABLE,
+        nullable: true)]
     private ?\DateTimeInterface $datePublish = null;
 
-    #[ORM\Column]
+    #[ORM\Column(
+        type: Types::BOOLEAN,
+        options: ['default' => false])]
     private ?bool $isPublished = null;
 
 
@@ -83,12 +93,12 @@ class Article
         return $this;
     }
 
-    public function isPublished(): ?bool
+    public function getIsPublished(): ?bool
     {
         return $this->isPublished;
     }
 
-    public function setPublished(bool $isPublished): static
+    public function setIsPublished(bool $isPublished): static
     {
         $this->isPublished = $isPublished;
 
