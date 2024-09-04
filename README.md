@@ -218,8 +218,54 @@ class ArticleType extends AbstractType
 
 ## Pour les templates
 
+Voir la documentation : 
+
+https://symfony.com/doc/current/form/form_themes.html#symfony-builtin-forms
+
+
 ```yaml
 # config/packages/twig.yaml
 twig:
     form_themes: ['bootstrap_5_layout.html.twig']
+```
+
+Importons Bootstrap 5 dans notre projet
+
+
+```bash
+php bin/console importmap:require bootstrap@5
+```
+
+Cela va ajouter la ligne suivante dans le fichier `importmap.php` :
+
+```php
+# config/importmap.php
+# ...
+'bootstrap' => [
+        'version' => '5.3.3',
+    ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
+    ],
+    'bootstrap/dist/css/bootstrap.min.css' => [
+        'version' => '5.3.3',
+        'type' => 'css',
+    ],
+# ...
+```
+
+Puis dans assets/app.js, importons le fichier CSS de Bootstrap 5
+
+```javascript
+import './bootstrap.js';
+/*
+ * Welcome to your app's main JavaScript file!
+ *
+ * This file will be included onto the page via the importmap() Twig function,
+ * which should already be in your base.html.twig.
+ */
+import './styles/app.css';
+import './vendor/bootstrap/dist/css/bootstrap.min.css'
+
+console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
 ```
